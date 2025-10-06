@@ -2,8 +2,12 @@ import { motion, useScroll, useTransform, useSpring, useReducedMotion } from 'fr
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { useMemo, useRef } from 'react'
-import shapes from '../assets/shapes.svg'
-import heroImg from '../assets/lucy-hero.jpg'
+
+// ✅ Public paths (served from /public at the site root)
+const shapes = '/shapes.svg'
+const heroImg = '/lucy-hero.jpg'
+// Fallback if the hero image is missing
+const heroFallback = 'https://img.youtube.com/vi/t9gM_GPbRHQ/maxresdefault.jpg'
 
 export default function Home(){
   const prefersReduced = useReducedMotion()
@@ -90,7 +94,7 @@ export default function Home(){
               </motion.div>
             </div>
 
-            <motion.ul className="mt-6 flex flex-wrap gap-2 text-sm text-gray-600" {...fadeUp(2)}>
+            <motion.ul className="mt-6 flex flex-wrap gap-2 text-sm text-gray-600 dark:text-gray-300" {...fadeUp(2)}>
               <li className="pill">Afro-gospel</li>
               <li className="pill">Kikuyu & English</li>
               <li className="pill">Live & Studio</li>
@@ -111,6 +115,7 @@ export default function Home(){
             >
               <img
                 src={heroImg}
+                onError={(e) => { (e.currentTarget as HTMLImageElement).src = heroFallback }}
                 alt="Lucy Muiruri — Wi Munene era"
                 loading="eager"
                 width={1200}
@@ -126,8 +131,8 @@ export default function Home(){
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                 >
-                  <div className="font-display font-bold text-xl">Wi Munene</div>
-                  <div className="text-sm text-gray-600">Album • 8 tracks • 2024</div>
+                  <div className="font-display font-bold text-xl text-gray-900 dark:text-white">Wi Munene</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">Album • 8 tracks • 2024</div>
                 </motion.div>
               </div>
             </motion.div>
@@ -139,7 +144,7 @@ export default function Home(){
       {/* Featured video (Aira) */}
       <section className="section">
         <motion.h2 className="h2" {...fadeUp()}>Featured Video</motion.h2>
-        <motion.p className="mt-2 text-gray-600" {...fadeUp(1)}>Watch “Aira” from Lucy’s YouTube channel.</motion.p>
+        <motion.p className="mt-2 text-gray-600 dark:text-gray-300" {...fadeUp(1)}>Watch “Aira” from Lucy’s YouTube channel.</motion.p>
 
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           <motion.div
@@ -158,8 +163,8 @@ export default function Home(){
           </motion.div>
 
           <motion.div className="glass rounded-2xl p-6" {...fadeUp(1)}>
-            <h3 className="font-display text-2xl font-bold">Aira</h3>
-            <p className="mt-2 text-gray-700">A beautiful worship piece. Subscribe for new releases and lyric videos.</p>
+            <h3 className="font-display text-2xl font-bold text-gray-900 dark:text-white">Aira</h3>
+            <p className="mt-2 text-gray-700 dark:text-gray-300">A beautiful worship piece. Subscribe for new releases and lyric videos.</p>
             <motion.a
               className="btn mt-4 inline-flex"
               href="https://www.youtube.com/@lucymuiruri2115"
@@ -181,7 +186,7 @@ export default function Home(){
         >
           <div className="md:col-span-2">
             <h2 className="h2">Book Lucy for your event</h2>
-            <p className="mt-3 text-gray-700">Concerts • Church events • TV & Radio • Private functions</p>
+            <p className="mt-3 text-gray-700 dark:text-gray-300">Concerts • Church events • TV & Radio • Private functions</p>
           </div>
           <motion.div className="justify-self-end" whileHover={!prefersReduced ? { scale: 1.03 } : undefined}>
             <Link to="/contact" className="btn">Request Booking</Link>
