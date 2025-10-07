@@ -1,17 +1,146 @@
-
 <!doctype html>
-<html lang="en">
+<html lang="en-KE">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.svg" />
-    <title>Lucy Muiruri — Official Site</title>
-    <meta name="description" content="Official portfolio site for Kenyan gospel artist Lucy Muiruri — music, videos, events, and booking." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Lucy Muiruri — Kenyan Gospel Artist | Official Site</title>
+
+    <!-- Canonical & Language -->
+    <link rel="canonical" href="https://lucymuiruri.co.ke/" />
+    <link rel="alternate" hreflang="en-KE" href="https://lucymuiruri.co.ke/" />
+    <link rel="alternate" hreflang="x-default" href="https://lucymuiruri.co.ke/" />
+
+    <!-- Description (155–160 chars ideal) -->
+    <meta name="description" content="Official site of Kenyan gospel artist Lucy Muiruri. Stream Wi Munene (2024), watch videos like Aira & Murithi Mwega, view events, and book performances." />
+
+    <!-- Keywords (optional; modern SEO relies more on content/OG/JSON-LD, but harmless) -->
+    <meta name="keywords" content="Lucy Muiruri, Kenyan gospel, Kikuyu worship, Wi Munene, Murithi Mwega, No Tugutoria, Ngai Mugaruri, Gospel artist Kenya" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Address bar / theme -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#0b1220" />
+
+    <!-- Favicons / PWA -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Lucy Muiruri" />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Lucy Muiruri — Official Site" />
+    <meta property="og:title" content="Lucy Muiruri — Kenyan Gospel Artist" />
+    <meta property="og:description" content="Stream Wi Munene (2024), watch videos like Aira & Murithi Mwega, see events, and book Lucy for your next program." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lucymuiruri.co.ke/" />
+    <!-- Social preview image (place an image at /public/og-image.jpg ~1200x630) -->
+    <meta property="og:image" content="https://lucymuiruri.co.ke/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Lucy Muiruri — Wi Munene album artwork and portrait" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lucy Muiruri — Kenyan Gospel Artist" />
+    <meta name="twitter:description" content="Official site: music, videos, events, and booking. Listen to Wi Munene (2024) and more." />
+    <meta name="twitter:image" content="https://lucymuiruri.co.ke/og-image.jpg" />
+
+    <!-- Performance Preconnects (safe minimal set) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.youtube-nocookie.com" />
+    <link rel="preconnect" href="https://i.ytimg.com" />
+    <link rel="preconnect" href="https://open.spotify.com" />
+    <link rel="preconnect" href="https://embed.music.apple.com" />
+    <link rel="preconnect" href="https://w.soundcloud.com" />
+    <link rel="preconnect" href="https://audiomack.com" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+
+    <!-- Force LIGHT on first load; user can toggle dark later -->
+    <script>
+      (function () {
+        document.documentElement.classList.remove('dark');
+        try { localStorage.setItem('theme', 'light'); } catch (e) {}
+      })();
+    </script>
+
+    <!-- JSON-LD: Musician (Person) + Album -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://lucymuiruri.co.ke/#person",
+          "name": "Lucy Muiruri",
+          "alternateName": ["Lucy W. Muiruri"],
+          "url": "https://lucymuiruri.co.ke/",
+          "image": "https://lucymuiruri.co.ke/og-image.jpg",
+          "description": "Kenyan gospel artist performing bilingual (Kikuyu & English) worship music; album Wi Munene (2024).",
+          "jobTitle": "Gospel Artist",
+          "address": { "@type": "PostalAddress", "addressCountry": "KE" },
+          "knowsLanguage": ["en", "kik"],
+          "sameAs": [
+            "https://www.youtube.com/@lucymuiruri2115",
+            "https://www.instagram.com/lucy.muiruri.906/",
+            "https://open.spotify.com/track/7MpkiuQw0DwcwYitU5D2Do",
+            "https://music.apple.com/us/artist/lucy-muiruri/1728262701",
+            "https://audiomack.com/lucy-muiruri",
+            "https://soundcloud.com/lucymuiruri",
+            "https://www.deezer.com/en/album/541573572",
+            "https://www.boomplay.com/artists/84277004?from=search"
+          ]
+        },
+        {
+          "@type": "MusicAlbum",
+          "@id": "https://lucymuiruri.co.ke/#album-wi-munene",
+          "name": "Wi Munene",
+          "byArtist": { "@id": "https://lucymuiruri.co.ke/#person" },
+          "inLanguage": ["en", "kik"],
+          "datePublished": "2024",
+          "numTracks": "8",
+          "image": "https://lucymuiruri.co.ke/og-image.jpg",
+          "url": "https://music.apple.com/us/album/wi-munene/1728263554",
+          "sameAs": [
+            "https://music.apple.com/us/album/wi-munene/1728263554",
+            "https://www.deezer.com/en/album/541573572",
+            "https://audiomack.com/lucy-muiruri/album/wi-munene"
+          ],
+          "track": [
+            { "@type": "MusicRecording", "name": "Murithi Mwega" },
+            { "@type": "MusicRecording", "name": "No Tugutoria" },
+            { "@type": "MusicRecording", "name": "Aira" },
+            { "@type": "MusicRecording", "name": "Ngai Mugaruri" }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://lucymuiruri.co.ke/#website",
+          "url": "https://lucymuiruri.co.ke/",
+          "name": "Lucy Muiruri — Official Site",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://lucymuiruri.co.ke/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
-  <body class="min-h-screen bg-gradient-to-b from-brand-50 via-white to-accent-50">
+
+  <body class="min-h-screen bg-gradient-to-b from-brand-50 via-white to-accent-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
